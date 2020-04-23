@@ -64,24 +64,9 @@
     font-size: 10px;
 }
 
-#jeans {
-    color: #1565c0;
-    background: #bbdefb;
-}
-
-#fajas {
-    color: #f9a825;
-    background: #FFF9C4;
-}
-
-#underwear{
-    color: #d32f2f;
-    background: #ffcdd2;
-}
-
-#fajas-jeans{
-    color: #389f60;
-    background: #c8edca;
+#etiqueta {
+    color: #FF7698;
+    background: #ffe4eb;
 }
 
 .logo{
