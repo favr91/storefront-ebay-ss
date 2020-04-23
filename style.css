@@ -23,9 +23,9 @@
     display: flex;
     align-items: center;
     text-align: center;
-    font-size: 32px;
+    font-size: 1.75rem;
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 .grid__title::before, .grid__title::after {
@@ -232,7 +232,12 @@
         border-radius: 5px;
         padding: 5px 10px;        
         font-size: 12px;
-    }   
+    } 
+    
+    .grid__title{        
+        font-size: 32px;        
+        margin-bottom: 30px;
+    }
   
 }
 
