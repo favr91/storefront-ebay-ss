@@ -1,0 +1,238 @@
+.container{
+    font-family: 'Roboto', sans-serif;
+    color: #1F2226;
+    box-sizing: border-box;
+    font-size: 0.938rem;
+    line-height: 1.5;    
+    margin: auto;   
+}
+
+.grid{     
+    display: grid;
+    gap: 0.625rem;
+    grid-template-columns: repeat(2, 1fr);  
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+    "l1 l2"
+    "l3 l4"
+    "l5 l6"
+    "l4 .";
+}
+
+.grid__title{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.grid__title::before, .grid__title::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #EBEBEB;
+}
+.grid__title::before {
+    margin-right: 1rem;
+}
+.grid__title::after {
+    margin-left: 1rem;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: #fff;
+    border: 1px solid #EBEBEB;
+    padding: 1.875rem;
+    transition: all .25s;
+    position: relative;
+}
+
+.box__categoria{
+    position: absolute;
+    left: 0;
+    bottom: 0; 
+    border-radius: 0 5px 0 7px;
+    padding: 4px 8px;
+    text-transform: capitalize;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 10px;
+}
+
+#jeans {
+    color: #1565c0;
+    background: #bbdefb;
+}
+
+#fajas {
+    color: #f9a825;
+    background: #FFF9C4;
+}
+
+#underwear{
+    color: #d32f2f;
+    background: #ffcdd2;
+}
+
+#fajas-jeans{
+    color: #389f60;
+    background: #c8edca;
+}
+
+.logo{
+    width: 100%;
+    max-width: 190px;
+}
+
+.grid-2{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;  
+    grid-template-rows: 4fr;
+    grid-template-areas: 
+    "f1"
+    "f2"
+    "f3"
+    "f4";
+    margin-top: 30px;
+}
+
+.features{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    border-radius: 8px;
+    background: #fafafa;
+    border: 1px solid #EBEBEB;
+    padding: 1rem 1.25rem;
+}
+
+.features__info{
+    margin-left: 1.25rem;
+}
+
+.features__circle{
+    border-radius: 100px;
+    background: white;
+    border: 1px solid #EBEBEB;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.features__icon{
+    color: #FF7698;
+    font-size: 1.25rem;
+}
+
+.features__title{
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 0.938rem;
+}
+
+.features__text{
+    margin: 0;
+}
+
+#feature1{
+    grid-area: f1;
+}
+
+#feature2{
+    grid-area: f2;
+}
+
+#feature3{
+    grid-area: f3;
+}
+
+#feature4{
+    grid-area: f4;
+}
+
+
+/* @media only screen and (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-gap: 15px;
+        grid-template-areas:
+            "l1 l2 l3"
+            "l4 l5 l6"
+            "l7 . .";  
+    }
+
+    .grid-2{
+        grid-gap: 15px;
+        grid-template-columns: repeat(4, 1fr);  
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "f1 f2 f3 f4";
+        margin-top: 30px;
+    }
+
+    .box{        
+        padding: 1.875rem;
+    }
+
+    .features{
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 1.25rem;
+    }
+    
+    .features__icon{
+        margin-bottom: 20px;
+    }
+} */
+
+@media only screen and (min-width: 992px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-gap: 20px;
+        grid-template-areas:
+            "l1 l2 l3 l4"
+            "l5 l6 l7 .";           
+    }
+
+    .grid-2{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-gap: 20px;
+        grid-template-areas:
+            "f1 f2 f3 f4";
+    }
+
+    .box{        
+        padding: 3.125rem;
+    }
+    
+    .box:hover{
+        box-shadow:  0 8px 20px rgba(0,0,0,0.10);
+        transform: scale(1.01);
+        cursor: pointer;
+    }
+
+    .features{
+        padding: 1.25rem 1.5625rem;
+    }
+
+    .box__categoria{
+        left: 0.625rem;
+        bottom: 0.625rem; 
+        border-radius: 5px;
+        padding: 5px 10px;        
+        font-size: 12px;
+    }   
+  
+}
+
