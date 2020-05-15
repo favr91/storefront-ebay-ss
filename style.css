@@ -19,11 +19,19 @@
     "l4 .";
 }
 
+.grid-categorias{
+    display: grid;
+    gap: 0.625rem;
+    grid-template-columns: repeat(3, 1fr);  
+    grid-template-rows: repeat(1, 1fr);
+    margin-bottom: 20px;
+}
+
 .grid__title{
     display: flex;
     align-items: center;
     text-align: center;
-    font-size: 1.75rem;
+    font-size: 1.625rem;
     font-weight: bold;
     margin-bottom: 15px;
 }
@@ -50,9 +58,20 @@
     padding: 1.875rem;
     transition: all .25s;
     position: relative;
+    text-decoration: none;
+    color: #1F2226;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-.box__categoria{
+.box--category{
+    flex-direction: column;
+    padding: 20px 15px !important;
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+.box__label{
     position: absolute;
     left: 0;
     bottom: 0; 
@@ -69,6 +88,11 @@
 .logo{
     width: 100%;
     max-width: 190px;
+}
+
+.silueta{
+    width: 80%;
+    margin-bottom: 10px;
 }
 
 .grid-2{
@@ -141,7 +165,7 @@
 }
 
 
-/* @media only screen and (min-width: 768px) {
+ @media only screen and (min-width: 768px) {
     .grid {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, auto);
@@ -154,11 +178,18 @@
 
     .grid-2{
         grid-gap: 15px;
-        grid-template-columns: repeat(4, 1fr);  
+        grid-template-columns: repeat(3, 1fr);  
         grid-template-rows: auto;
         grid-template-areas: 
-        "f1 f2 f3 f4";
+        "f1 f2 f3"
+        "f4 . .";
         margin-top: 30px;
+    }
+
+    .grid-categorias{
+        grid-template-columns: repeat(6, 1fr);  
+        grid-template-rows: repeat(1, 1fr);
+        margin-bottom: 30px;
     }
 
     .box{        
@@ -170,11 +201,10 @@
         justify-content: center;
         padding: 1.25rem;
     }
-    
-    .features__icon{
-        margin-bottom: 20px;
+    .features__circle{
+        margin-bottom: 0.625rem;
     }
-} */
+}
 
 @media only screen and (min-width: 992px) {
     .grid {
@@ -194,6 +224,25 @@
             "f1 f2 f3 f4";
     }
 
+    .grid-categorias{
+        display: grid;
+        gap: 1.25rem;
+        grid-template-columns: repeat(6, 1fr);  
+        grid-template-rows: repeat(1, 1fr);
+        margin-bottom: 50px;
+    }
+
+    .box--category{
+        font-size: 0.875rem;
+        padding: 30px 15px !important;        
+    }
+
+    .silueta{
+        width: 50%;
+        margin-bottom: 10px;
+        max-width: 150px;
+    }
+
     .box{        
         padding: 3.125rem;
     }
@@ -207,8 +256,8 @@
     .features{
         padding: 1.25rem 1.5625rem;
     }
-
-    .box__categoria{
+  
+    .box__label{
         left: 0.625rem;
         bottom: 0.625rem; 
         border-radius: 5px;
