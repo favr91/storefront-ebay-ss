@@ -19,6 +19,17 @@
     "l4 .";
 }
 
+.grid-best-seller{
+    display: grid;
+    gap: 0.625rem;
+    grid-template-columns: repeat(2, 1fr);  
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+    "p1 p2"
+    "p3 p4"
+    "p5 p6";
+}
+
 .grid-categorias{
     display: grid;
     gap: 0.625rem;
@@ -127,7 +138,7 @@
 }
 
 .silueta{
-    width: 40%;
+    /* width: 40%; */
     margin-bottom: 10px;
 }
 
@@ -232,6 +243,51 @@
     grid-area: ct8;
 }
 
+#prod1{
+    grid-area: p1;
+}
+
+#prod2{
+    grid-area: p2;
+}
+
+#prod3{
+    grid-area: p3;
+}
+
+#prod4{
+    grid-area: p4;
+}
+
+#prod5{
+    grid-area: p5;
+}
+
+#prod6{
+    grid-area: p6;
+}
+
+.grid-best-seller__card{
+    border-radius: 8px;
+    padding: 15px;
+    border: 1px solid #EBEBEB;
+    background: #fff;
+    text-decoration: none;
+    transition: all .25s;
+}
+
+.grid-best-seller__ref{
+    color: #1F2226;
+    margin: 0;
+}
+
+.grid-best-seller__brand{
+    color: #FF7698;
+    font-size: 0.75rem;
+    margin: 0;
+}
+
+
  @media only screen and (min-width: 768px) {
     .grid {
         grid-template-columns: repeat(4, 1fr);
@@ -303,13 +359,21 @@
         margin-bottom: 60px;
     }
 
+    .grid-best-seller{
+        gap: 1.25rem;
+        grid-template-columns: repeat(6, 1fr);  
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-areas:
+        "p1 p2 p3 p4 p5 p6";
+    }
+
     .box--category{
         font-size: 0.875rem;
         padding: 25px 15px !important;        
     }
 
     .silueta{
-        width: 50%;
+     
         margin-bottom: 10px;
         max-width: 150px;
     }
@@ -318,7 +382,7 @@
         padding: 3.125rem;
     }
     
-    .box:hover{
+    .box:hover, .grid-best-seller__card:hover {
         box-shadow:  0 8px 20px rgba(0,0,0,0.10);
         transform: scale(1.01);
         cursor: pointer;
@@ -329,8 +393,8 @@
     }
   
     .box__label{
-        left: 0.625rem;
-        bottom: 0.625rem; 
+        left: 0.425rem;
+        bottom: 0.425rem; 
         border-radius: 5px;
         padding: 5px 10px;        
         font-size: 12px;
