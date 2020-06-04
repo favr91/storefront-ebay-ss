@@ -277,8 +277,10 @@
 }
 
 .grid-best-seller__ref{
+    font-size: 0.875rem;
     color: #1F2226;
     margin: 0;
+    line-height: 1.4;
 }
 
 .grid-best-seller__brand{
